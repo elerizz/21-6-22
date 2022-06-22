@@ -1,56 +1,57 @@
-// Scriviamo una funzione che passata al map, dato un array di nomi torna una lista di "indice + Nome". es:
+// 1- forEach
+// Eseguire console.log() di ogni elemento di array
 
-// ```js
-// const names = ['Luca', 'Gabriele'];
-// namesToList(names) // -> ['1 - Luca', '2 - Gabriele']
-// ```
+(function () {
+  const array = [1, 2, 3, 4, 5, 6, 7, 8];
 
-// //per ripassare le function normali vs. arrow function
-// const funzioneSemplice = function (num1, num2) {
-//   return num1 + num2;
-// };
-// console.log(funzioneSemplice(2, 3));
+  const everyElement = console.log(array);
 
-// //per ripassare le arrow function
-// const arrowFunction = (num1, num2) => num1 + "," + num2;
-// console.log(arrowFunction(4, 6));
+  const showEveryElement = everyElement.forEach(array);
 
-// const arrayOne = ["alfa", "beta", "gamma", "delta", "epsilon", "zeta"];
+  console.log(showEveryElement);
+})();
 
-// const arrayTwo = ["ein", "zwei", "drei", "viar", "funf"];
+// 2 - Lanciare un console.log() di ogni elemento, dopo un setTimeout di elemento * index
+// risultato: dopo 0s: console.log(1)
+//            dopo 1s: console.log(2)
+//            dopo 2s: console.log(3)
 
-// console.log(arrowFunction(arrayOne, arrayTwo));
+(function () {
+  console.clear();
 
-// esercizio 1
+  const array = [1, 2, 3, 4, 5, 6, 7, 8];
+  const timeMs = 1000;
+  const showEveryElement = (element, index, array) => console.log(element);
+  
+  const setTimeout.forEach(showEveryElement, timeMs * index,_);
 
-const arrayNames = ["Gabriele", "Giada", "Marco", "Lucia", "Fatima"];
-const arrayNamesPlusIndex = arrayNames.map(
-  (element, index, _) => index + "-" + element
-);
+  console.log(setTimeout);
+})();
 
-console.log(arrayNamesPlusIndex);
+// 3- filter
+// Tenere dentro l'array solo i numeri pari
+// risultato: [2,4,6,8]
 
-// Scriviamo una funzione che passata al map, converta ogni elemento al propri indice inverso. es:
+(function () {
+  console.clear();
+  const array = [1, 2, 3, 4, 5, 6, 7, 8];
 
-// ```js
-// const names = ['Luca', 'Gabriele', 'Richard', 'Roberta'];
-// namesToList(names) // -> [3, 2, 1, 0];
+  showEvenNumbers = (element, index, array) => element % 2 === 0;
 
-const arrayNamesReverseIndex = arrayNames.map(
-  (_, index, array) => array.lenght - 1 - index
-);
+  const evenNumbers = array.filter(showEvenNumbers);
 
-console.log(arrayNamesReverseIndex);
+  console.log(evenNumbers);
+})();
 
-// Scriviamo una funzione che passata al map, dato un array ne torni uno al contrario. es:
+// 4- Tenere solo i numeri in comune con questo array: [10, 1, 2, 5, 6], usare utility come Array.includes oppure Array.indexOf.
+// risultato: [1,2,5,6]
 
-// ```js
-// const names = ['Luca', 'Gabriele'];
-// namesToList(names) // -> ['Gabriele', 'Luca'];
-// ```
+(function () {
+  console.clear();
+  const array = [1, 2, 3, 4, 5, 6, 7, 8];
+  const arrayTwo = [10, 1, 2, 5, 6];
 
-const arrayNamesReverse = arrayNames.map(
-  (element, index, array) => element array.lenght - 1 - index
-);
+  checkElementsInCommon = (element, index, array) => array.includes(element);
 
-console.log(arrayNamesReverse);
+  console.log(arrayTwo.filter(checkElementsInCommon));
+})();
