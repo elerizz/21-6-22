@@ -1,15 +1,25 @@
 // 1- forEach
 // Eseguire console.log() di ogni elemento di array
 
-(function () {
-  const array = [1, 2, 3, 4, 5, 6, 7, 8];
+// (function () {
+//   const array = [1, 2, 3, 4, 5, 6, 7, 8];
 
-  const everyElement = console.log(array);
+//   const everyElement = console.log(array);
 
-  const showEveryElement = everyElement.forEach(array);
+//   const showEveryElement = everyElement.forEach(array);
 
-  console.log(showEveryElement);
-})();
+//   console.log(showEveryElement);
+// })();
+
+// ------------ versione 2
+
+const = logEveryItem = (item) => console.log(item);
+array.forEach(logEveryItem)
+
+setTumeout ( () => {
+  array.forEach(logEveryItem)
+})
+
 
 // 2 - Lanciare un console.log() di ogni elemento, dopo un setTimeout di elemento * index
 // risultato: dopo 0s: console.log(1)
@@ -21,9 +31,10 @@
 
   const array = [1, 2, 3, 4, 5, 6, 7, 8];
   const timeMs = 1000;
-  const showEveryElement = (element, index, array) => console.log(element);
-  
-  const setTimeout.forEach(showEveryElement, timeMs * index,_);
+  const showEveryElement = (element, index, array) =>
+    console.log.forEach(element);
+
+  setTimeout(showEveryElement, timeMs * index, _);
 
   console.log(setTimeout);
 })();
